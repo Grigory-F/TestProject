@@ -1,0 +1,143 @@
+@import "core-style/mixins";
+
+.page {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ebecef;
+}
+.container {
+  @include calculate-size(padding, 20, 10, 1300);
+  &__nav {
+  }
+}
+.container-view {
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+.navigation-menu {
+  &__title {
+    @include calculate-size(font-size, 30, 20, 1300);
+    margin: 0;
+    color: rgb(61, 81, 112);
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 0;
+  }
+  &__item {
+    @include calculate-size(font-size, 20, 15, 1300);
+  }
+
+  &__item-link {
+    color: rgb(61, 81, 112);
+    text-decoration: none;
+    display: inline-block;
+    &--active {
+      font-weight: 700;
+      border-bottom: 2px solid rgb(61, 81, 112);
+    }
+  }
+}
+
+.gen-weather {
+
+  &__desc {
+    color: rgb(61, 81, 112);
+    margin-top: 20px;
+  }
+
+  &__sign {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &--temperature {
+      @include calculate-size(font-size, 50, 30, 1300)
+    }
+    &--weather {
+      @include calculate-size(font-size, 30, 20, 1300)
+    }
+  }
+  &__sign-img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.container-view {
+  &__container-input {
+  }
+}
+.container-input {
+  display: flex;
+  gap: 10px;
+  &__input {
+    border: 1px solid #e1e5eb;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+    background-color: white;
+    transition: 0.5s box-shadow;
+    &:focus {
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  }
+
+  &__button {
+    border: 1px solid #e1e5eb;
+    padding: 10px;
+    white-space: nowrap;
+    color: rgb(61, 81, 112);
+    cursor: pointer;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .container-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__input {
+      
+      &:focus {
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      }
+    }
+  
+    &__button {
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+.content {
+  &__time {
+    color: rgb(61, 81, 112);
+    @include calculate-size(font-size, 40, 30, 1300);
+    margin: 0;
+  }
+}
+
+.error-sign {
+  color: red;
+  display: none;
+  font-size: 14px;
+  margin: 0;
+}
+
+.text-search {
+  @include calculate-size(font-size, 20, 17, 1300);
+}

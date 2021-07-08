@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Page description" />
+    <link rel="canonical" href="https://www.mywebsite.com/page" />
+    <!-- Messenger's snippets -->
+    <meta property="og:title" content="Unique page title - My Site" />
+    <meta property="og:description" content="Page description" />
+    <meta property="og:image" content="https://www.mywebsite.com/image.jpg" />
+    <meta property="og:image:alt" content="Image description" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="https://www.mywebsite.com/page" />
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/my.webmanifest" />
+    <!-- Style browser tab -->
+    <meta name="theme-color" content="#FF00FF" />
+    <!-- Style -->
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Current time</title>
+  </head>
+  <body class="page">
+    <div class="container">
+      <nav class="container__nav navigation-menu container-view">
+        <h1 class="navigation-menu__title">It's app for viewing weather</h1>
+        <ul class="navigation-menu__list">
+          <li class="navigation-menu__item">
+            <a href="time.html" class="navigation-menu__item-link">Time</a>
+          </li>
+          <li class="navigation-menu__item">
+            <a href="#" class="navigation-menu__item-link navigation-menu__item-link--active">Weather</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container__content container-view content">
+        <div class="container-view__container-input container-input text-search">
+            <input type="text" class="container-input__input text-search">
+            <div class="container-input__button">Get Weather</div>
+        </div>
+        <div class="container-view__content gen-weather">
+            <p class="error-sign">Make sure that the place name is entered correctly</p>
+        </div>
+      </div>
+    </div>
+    <script src="assets/weather.js" defer></script>
+  </body>
+</html>

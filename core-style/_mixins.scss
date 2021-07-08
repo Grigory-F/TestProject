@@ -1,0 +1,8 @@
+@mixin calculate-size($property, $startSize, $minSize, $max-width) {
+    $addSize: $startSize - $minSize;
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$max-width - 320}));
+}
+@mixin calculate-value($property, $startSize, $minSize, $max-width, $value-two) {
+    $addSize: $startSize - $minSize;
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$max-width} - 320))) $value-two;
+}
