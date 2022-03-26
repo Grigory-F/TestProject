@@ -14,13 +14,13 @@ buttonGet.addEventListener("click", async () => {
       }
     const data = await response.json();
     const genDataWeather = {
-        temperature: data['main']['temp'], 
-        weather: data['weather'][0]['description'],
-        icon: data['weather'][0]['icon'],
+        temperature: () => Math.round(data.main.temp - 273.15), 
+        weather: data.weather[0].description,
+        icon: data.weather[0].icon,
     }
     genWeather.insertAdjacentHTML('beforeend', `
     <div class="gen-weather__desc">
-        <div class="gen-weather__sign gen-weather__sign--temperature">${genDataWeather.temperature} F&deg</div>
+        <div class="gen-weather__sign gen-weather__sign--temperature">${genDataWeather.temperature()} F&deg</div>
         <div class="gen-weather__sign gen-weather__sign--weather">${genDataWeather.weather} <img class="gen-weather__sign-img" src="http://openweathermap.org/img/w/${genDataWeather.icon}.png" alt="icon weather"></div>
     </div>
     `)
