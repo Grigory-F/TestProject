@@ -13,7 +13,6 @@ buttonGet.addEventListener("click", async () => {
         errorSign.style.display = 'none';
       }
     const data = await response.json();
-    console.log(data);
     const genDataWeather = {
         temperature: data['main']['temp'], 
         weather: data['weather'][0]['description'],
