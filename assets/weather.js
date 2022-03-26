@@ -20,7 +20,7 @@ buttonGet.addEventListener("click", async () => {
     }
     genWeather.insertAdjacentHTML('beforeend', `
     <div class="gen-weather__desc">
-        <div class="gen-weather__sign gen-weather__sign--temperature">${genDataWeather.temperature()} F&deg</div>
+        <div class="gen-weather__sign gen-weather__sign--temperature">${genDataWeather.temperature()} С&deg</div>
         <div class="gen-weather__sign gen-weather__sign--weather">${genDataWeather.weather} <img class="gen-weather__sign-img" src="http://openweathermap.org/img/w/${genDataWeather.icon}.png" alt="icon weather"></div>
     </div>
     `)

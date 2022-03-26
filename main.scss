@@ -13,7 +13,7 @@
 }
 .container-view {
     max-width: 500px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     background-color: white;
@@ -70,6 +70,7 @@
 }
 
 .container-view {
+    margin-top: 20px;
     &__container-input {
     }
 }
